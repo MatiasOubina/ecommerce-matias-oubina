@@ -1,0 +1,22 @@
+body{
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navBar{
+    display: flex;
+
+        a{
+            text-decoration: none;
+            margin-right: 15px;
+        }
+}
