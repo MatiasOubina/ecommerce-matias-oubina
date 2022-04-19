@@ -14,9 +14,20 @@ header{
 
 .navBar{
     display: flex;
+    align-items: center;
 
         a{
             text-decoration: none;
             margin-right: 15px;
+            color: white;
         }
+}
+
+.title_container{
+    text-align: center;
+    color: gold;
+}
+
+.cart{
+    width: 50px;
 }
