@@ -5,7 +5,7 @@ const App = () => {
     return(
         <>
         <Header/>
-        <ItemListContainer tituloContainer={"La lista de productos va acá"} />
+        <ItemListContainer/>
         </>
     )
 

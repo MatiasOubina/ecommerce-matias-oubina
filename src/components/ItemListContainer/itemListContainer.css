@@ -1,4 +1,18 @@
-.title_container{
+.simulador{
+    margin: 0 auto;
+    width: 190px;
+}
+
+span{
+    margin-left: 70px;
+    background-color: white;
+    color: black;
+    display: block;
+    width: 40px;
     text-align: center;
-    color: gold;
+    margin-bottom: 3px;
+}
+
+button{
+    margin-left: 5px;
 }
