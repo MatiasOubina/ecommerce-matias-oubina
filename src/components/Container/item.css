@@ -1,0 +1,11 @@
+.card{
+    text-align: center;
+}
+
+.card_photo{
+    height: 225px;
+}
+
+.btn_detail{
+    margin: 8px auto;
+}
