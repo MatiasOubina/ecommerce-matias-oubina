@@ -1,24 +1,25 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 // import ItemCount from "./ItemCount"
 import ItemList from "./ItemList"
 import productos from "../../productos.json"
 import "./itemListContainer.css"
 
+
 const ItemListContainer = () =>{
     
-    
-    // const addToCart = (cantidad)=>{
-    //     return(alert(`Se agregaron ${cantidad} productos al carrito`))
-    // }
-
     const [stock, setStock] = useState([]);
     const [loading, setLoading] = useState(true)
+    
+    //Si lo uso así, me trae todo perfecto
+    const resultado = useParams()
+    console.log(resultado)
 
     useEffect(()=>{
         const pedido = new Promise((resolve) =>{
             setTimeout(()=>{
                 resolve(stock)
-            }, 2000)
+            }, 2000) 
         })
 
         pedido
@@ -31,8 +32,6 @@ const ItemListContainer = () =>{
 
     return(
         <>
-         {/* <ItemCount stock = {10} min = {1} onAdd ={addToCart}/> */}
-
          {loading ? <h2>Cargando...</h2> : <ItemList productos = {productos}/>}
         </>
     )

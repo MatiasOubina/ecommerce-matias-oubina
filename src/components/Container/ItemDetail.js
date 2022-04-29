@@ -2,6 +2,8 @@
 
 const ItemDetail = ({producto}) => {
   
+  
+
   const muestraProducto = producto.filter((item) => item.id === 3)
 
 

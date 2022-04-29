@@ -1,11 +1,12 @@
 import "./header.css"
 import NavBar from "../NavBar/NavBar"
+import { Link } from "react-router-dom"
 
 const Header = () => {
     return(
         <header>
             <div className="logo_header">
-                <h1>JCK FOOD</h1>
+               <Link to="/"><h1>JCK FOOD</h1></Link>
             </div>
             <div className="navBar_header">
                 <NavBar/>
