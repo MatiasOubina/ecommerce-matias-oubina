@@ -1,14 +1,14 @@
 [
 {   "id": 1, 
     "name": "Katsudon",
-    "pais":"Japón",
+    "pais":"Japon",
     "description": "Detalle de producto 1", 
     "foto": "https://img.taste.com.au/jbdQff7C/taste/2016/11/katsudon-bowl-92023-2.jpeg", 
     "price": 500
 },
 {   "id": 2,
     "name": "Yakimeshi",
-    "pais":"Japón",
+    "pais":"Japon",
     "description": "Detalle de producto 2",
     "foto":"https://assets.unileversolutions.com/recipes-v2/231540.jpg" ,
     "price": 700
@@ -36,7 +36,7 @@
 },
 {   "id": 6,
     "name": "Sushi",
-    "pais":"Japón", 
+    "pais":"Japon", 
     "description": "Detalle de producto 4",
     "foto": "https://s1.eestatic.com/2015/01/20/cocinillas/cocinillas_4759532_115736779_1706x960.jpg", 
     "price": 1500}

@@ -5,29 +5,31 @@ import productos from "../../productos.json"
 
 function ItemDetailContainer() {
 
-  const [stock, setStock] = useState({});
+  const [stock, setStock] = useState();
   const [loading, setLoading] = useState(true)
   
-  //Si lo uso así, me sale siempre undefined
-  const {resultado} = useParams()
-    console.log(resultado)
-
-    
+  const {id} = useParams()
 
   useEffect(()=>{
       const pedido = new Promise((resolve) =>{
           setTimeout(()=>{
               resolve(stock)
-          }, 2000)
+          }, 1000)
       })
 
       pedido
-      .then(respuesta =>{
+      .then((respuesta) =>{
+        if(id){
+          const filtro = productos.filter((item) => item.id === parseInt(id))
+          setStock(filtro)
+        } else {
           setStock(respuesta)
+        }
+        
       })
       .catch(error => console.log(error))
       .finally(()=> setLoading(false))
-  }, [])
+  }, [id])
   
   
 
@@ -37,7 +39,8 @@ function ItemDetailContainer() {
     ) 
   } else{
     return(
-      <ItemDetail producto={productos}/>
+      <ItemDetail key={stock[0].id} producto={stock[0]}/>
+      
     )
   }
 }

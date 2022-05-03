@@ -13,7 +13,7 @@ const Item = ({producto}) =>{
         <div key={producto.id} className="card">
             <h3>{producto.name}</h3>
             <div>
-                <img src={producto.foto} className="card_photo" alt="Menu del día" />
+                <img src={producto.foto} className="card_photo" alt={producto.name} />
             </div>
             <button className="btn_detail" onClick={handleClick}>Detalle</button>
             <button>$ {producto.price}</button>    
