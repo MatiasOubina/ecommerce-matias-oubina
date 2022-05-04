@@ -1,5 +1,5 @@
 .simulador{
-    margin: 0 auto;
+    margin: 5px 45px;
     width: 190px;
 }
 
@@ -15,5 +15,9 @@ span{
 
 button{
     margin-left: 5px;
+}
+
+#finally{
+    margin-right: -15px;
 }
 

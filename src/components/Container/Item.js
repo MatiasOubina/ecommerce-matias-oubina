@@ -16,7 +16,6 @@ const Item = ({producto}) =>{
                 <img src={producto.foto} className="card_photo" alt={producto.name} />
             </div>
             <button className="btn_detail" onClick={handleClick}>Detalle</button>
-            <button>$ {producto.price}</button>    
         </div>
     )
 }
