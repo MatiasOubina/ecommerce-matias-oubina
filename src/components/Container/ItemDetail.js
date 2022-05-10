@@ -1,14 +1,18 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { contexto } from "../Cart/CartContext"
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({producto}) => {
 
   const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
+  const {agregarAlCarrito} = useContext( contexto )
 
-  const addToCart = (cantidad, total)=>{
-    console.log(`Se agregaron ${cantidad} productos al carrito. Total $ ${total}`)
+  const addToCart = (cantidad)=>{
     setCantidadSeleccionada(cantidad)
+    agregarAlCarrito(producto, cantidad)
   }
+
+  
   
   return (
     <>  
@@ -17,7 +21,7 @@ const ItemDetail = ({producto}) => {
         <p>{producto.description}</p>
         <img src={producto.foto} alt={producto.name} />
         <p>Precio: ${producto.price}</p>
-        <ItemCount stock = {10} min = {1} onAdd ={addToCart} precio={producto.price} />
+        <ItemCount stock = {10} min = {1} onAdd ={addToCart}/>
       </div>
     </>
   )
