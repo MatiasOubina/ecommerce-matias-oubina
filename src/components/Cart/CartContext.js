@@ -10,35 +10,43 @@ const MiCustomProvider = ({children}) =>{
 
     const agregarAlCarrito = (producto, quantity) =>{
         if(estaEnCarrito(producto.id)){
-            const newCart = [...cart];
-            for (const element of newCart){
-                if(element.producto.id == producto.id){
-                    producto.quantity = producto.quantity + quantity;
+            const actualizarCarrito = [...cart];
+            // for (const element of actualizarCarrito){
+            //     if(element.producto.id == producto.id){
+            //         producto.quantity = producto.quantity + quantity;
+            //     }
+            // }
+            actualizarCarrito.forEach((e) =>{
+                if(e.producto.id === producto.id){
+                    e.quantity += quantity;
                 }
-            }
-            setCart(newCart)
+            })
+            setCart(actualizarCarrito)
         } else{
-            setCart([
-                ...cart,{
-                    producto: producto,
-                    quantity: quantity,
-                }
-            ])
+            setCart([...cart, {producto, quantity}])
         }
     }
     const eliminarDelCarrito = (id) =>{
-        const newCart = [...cart].map(element => element.id !== id);
-        setCart(newCart);
+        const actualizarCarrito = cart.filter(e => e.producto.id !== id);  //[...cart].map
+        setCart(actualizarCarrito);
     }
     const vaciarCarrito = () =>{
         setCart([])
     }
-    const estaEnCarrito = (producto) => {
-        return cart.find(el => el.id === producto)
+    const estaEnCarrito = (id) => {
+        return cart.find(e => e.producto.id === id)
+    }
+
+    const iconCart = () => {
+        return cart.reduce((acum, value) => acum + value.quantity, 0);
+    }
+
+    const totalPagar = () =>{
+        return cart.reduce((acum, value) => (acum + (value.quantity * value.producto.price)),0)
     }
 
     return(
-        <Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito} }>
+        <Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito, totalPagar, iconCart} }>
             {children}
         </Provider>
     )
