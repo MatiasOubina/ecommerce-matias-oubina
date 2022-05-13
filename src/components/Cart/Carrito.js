@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { contexto } from "./CartContext"
 import { Link } from "react-router-dom"
+import { db } from "../../firebase/firebase"
 import "./carrito.css"
 
 const Carrito = () => {

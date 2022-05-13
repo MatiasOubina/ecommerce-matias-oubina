@@ -12,8 +12,6 @@ const ItemDetail = ({producto}) => {
     agregarAlCarrito(producto, cantidad)
   }
 
-  
-  
   return (
     <>  
       <div id= {producto.id}>

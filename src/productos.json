@@ -30,14 +30,15 @@
 {   "id": 5,
     "name": "Dumplings",
     "pais":"China", 
-    "description": "Detalle de producto 4", 
+    "description": "Detalle de producto 5", 
     "foto": "https://i.blogs.es/751eeb/dumpling-3765243_1280/1366_2000.jpg", 
     "price": 1300
 },
 {   "id": 6,
     "name": "Sushi",
     "pais":"Japon", 
-    "description": "Detalle de producto 4",
+    "description": "Detalle de producto 6",
     "foto": "https://s1.eestatic.com/2015/01/20/cocinillas/cocinillas_4759532_115736779_1706x960.jpg", 
-    "price": 1500}
+    "price": 1500
+}
 ]

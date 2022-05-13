@@ -11,11 +11,6 @@ const MiCustomProvider = ({children}) =>{
     const agregarAlCarrito = (producto, quantity) =>{
         if(estaEnCarrito(producto.id)){
             const actualizarCarrito = [...cart];
-            // for (const element of actualizarCarrito){
-            //     if(element.producto.id == producto.id){
-            //         producto.quantity = producto.quantity + quantity;
-            //     }
-            // }
             actualizarCarrito.forEach((e) =>{
                 if(e.producto.id === producto.id){
                     e.quantity += quantity;
@@ -27,7 +22,7 @@ const MiCustomProvider = ({children}) =>{
         }
     }
     const eliminarDelCarrito = (id) =>{
-        const actualizarCarrito = cart.filter(e => e.producto.id !== id);  //[...cart].map
+        const actualizarCarrito = cart.filter(e => e.producto.id !== id);  
         setCart(actualizarCarrito);
     }
     const vaciarCarrito = () =>{
